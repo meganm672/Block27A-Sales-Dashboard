@@ -132,7 +132,7 @@ export const mockTransactions = [
   export const mockLineData = [
     {
       id: "weekdays",
-      color: tokens("dark").greenAccent[500],
+    //   color: tokens("dark").greenAccent[500],
       data: [
         {
           x: "donut",
@@ -163,7 +163,7 @@ export const mockTransactions = [
     },
      {
        id: "weekends",
-       color: tokens("dark").blueAccent[300],
+    //    color: tokens("dark").blueAccent[300],
        data: [
          {
            x: "donut",
@@ -194,7 +194,7 @@ export const mockTransactions = [
      },
     {
       id: "holidays",
-      color: tokens("dark").redAccent[200],
+    //   color: tokens("dark").redAccent[200],
       data: [
         {
           x: "donut",

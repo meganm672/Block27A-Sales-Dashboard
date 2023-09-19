@@ -1,13 +1,13 @@
 import { useState } from 'react'
 
 import './App.css'
-import { mockTransactions } from '../mockData'
+
 function App() {
 
 
   return (
     <>
-      
+      <h1>Hello</h1>
     </>
   )
 }
