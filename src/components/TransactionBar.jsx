@@ -78,7 +78,7 @@ export default function TransactionBar (){
         },
       ];
     return(
-        <Box sx={{ height: 300, width: '40vw', justifyContent: "felx-end" }}>
+        <Box sx={{ height: 300, width: '35vw', backgroundColor: "#DCDCDC"}}>
             <Typography variant='h5'>Recent Transactions</Typography>
         <DataGrid
           getRowId={(row) => row.txId}

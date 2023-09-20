@@ -13,12 +13,12 @@ function App() {
       <Box
         sx={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(4, 1fr)',
+          gridTemplateColumns: 'repeat(5, 1fr)',
           gap: 1,
           gridTemplateRows: 'auto',
-          gridTemplateAreas:`"header title title title"
-          "header . . ."
-          "header chart chart transaction"`,
+          gridTemplateAreas:`"header title title title title"
+          "header . . . ."
+          "header chart chart transaction transaction"`,
         }}
       > 
         <Box sx={{gridArea:"header"}}> 
