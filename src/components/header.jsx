@@ -67,6 +67,7 @@ export default function Header(){
     return (
       <Stack direction="row" spacing={2}>
         <Paper elevation= {8} style={paperStyle}>
+      
         <IconButton
             size="large"
             edge="start"
@@ -75,7 +76,12 @@ export default function Header(){
             sx={{ mr: 2 }}
             style={menuStyle}
           >
-            <MenuIcon />
+              <MenuIcon ref={anchorRef}
+            id="composition-button"
+            aria-controls={open ? 'composition-menu' : undefined}
+            aria-expanded={open ? 'true' : undefined}
+            aria-haspopup="true"
+            onClick={handleToggle} />
           </IconButton>
         <div>
             <Typography variant ="h3" style={ownerStyle}>The King's Resturaunt</Typography>
