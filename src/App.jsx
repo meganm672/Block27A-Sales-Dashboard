@@ -1,14 +1,19 @@
-import { useState } from 'react'
+import Grid from '@mui/material/Grid';
 import Header from './components/header'
 import './App.css'
-
+import TransactionBar from './components/TransactionBar'
 function App() {
 
-
+  const hOneStyle={textAlign:"center"}
   return (
     <>
-    <Header/>
-      <h1>Hello</h1>
+    <Grid container>
+
+         <Header/> 
+     <Grid alignContent={"left"}>
+         <TransactionBar />
+      </Grid>
+    </Grid>
     </>
   )
 }

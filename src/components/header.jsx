@@ -11,6 +11,7 @@ import SvgIcon from '@mui/material/SvgIcon';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import Box from '@mui/material/Box'
 import React from 'react';
 
 export default function Header(){
@@ -90,10 +91,10 @@ export default function Header(){
           >
             <HomeIcon style={homeStyle}/> {" "}Dashboard
           </Button>
-          <box>
+          <Box>
           <Typography style={helpStyle}> <HelpOutlineIcon fontSize= "small" style={helpIconStyle} />  FAQ Page</Typography>
 
-          </box>
+          </Box>
           <Popper
             open={open}
             anchorEl={anchorRef.current}
