@@ -57,7 +57,7 @@ export default function Header(){
         );
       }
 
-    const paperStyle = {height: '100vh', width: '25vw', backgroundColor: "#DCDCDC"}
+    const paperStyle = {height: '100vh', width: '30vw', backgroundColor: "#DCDCDC"}
     const ownerStyle = {margin: "5px",textAlign: "center",}
     const dashStyle= {margin: "5px", textAlign: "center",color: '#66CDAA'}
     const menuStyle={margin: "10px"}

@@ -2,10 +2,11 @@
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
 import Typography from '@mui/material/Typography';
+
 export default function TransactionBar (){
   
     const columns = [
-        { field: 'ID', headerName: 'ID', width: 90 },
+        { field: 'txId', headerName: 'ID', width: 90 },
         {
           field: 'user',
           headerName: 'User',
@@ -15,14 +16,14 @@ export default function TransactionBar (){
         {
           field: 'date',
           headerName: 'Date',
-          width: 150,
+          width: 100,
           editable: false,
         },
         {
           field: 'cost',
           headerName: 'cost',
           type: 'number',
-          width: 110,
+          width:80,
           editable: false,
         },
       ];
@@ -77,7 +78,7 @@ export default function TransactionBar (){
         },
       ];
     return(
-        <Box sx={{ height: 400, width: '60vw', justifyContent: "left" }}>
+        <Box sx={{ height: 300, width: '40vw', justifyContent: "felx-end" }}>
             <Typography variant='h5'>Recent Transactions</Typography>
         <DataGrid
           getRowId={(row) => row.txId}
