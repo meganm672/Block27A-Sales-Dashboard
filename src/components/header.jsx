@@ -62,8 +62,8 @@ export default function Header(){
     const dashStyle= {margin: "5px", textAlign: "center",color: '#66CDAA'}
     const menuStyle={margin: "10px"}
     const homeStyle= {margin: "20px"}
-    const helpStyle={margin: "20px", paddingBottom: "15px"}
-    const helpIconStyle= {margin:"20px", }
+    const helpStyle={margin: "5px", paddingLeft: "20px"}
+    const helpIconStyle= {margin:"5px", paddingLeft:"30px" }
     return (
       <Stack direction="row" spacing={2}>
         <Paper elevation= {8} style={paperStyle}>
@@ -92,8 +92,7 @@ export default function Header(){
             <HomeIcon style={homeStyle}/> {" "}Dashboard
           </Button>
           <Box>
-          <Typography style={helpStyle}> <HelpOutlineIcon fontSize= "small" style={helpIconStyle} />  FAQ Page</Typography>
-
+            <Typography style={helpStyle}> <HelpOutlineIcon fontSize= "small" style={helpIconStyle} /> FAQ Page</Typography>
           </Box>
           <Popper
             open={open}
