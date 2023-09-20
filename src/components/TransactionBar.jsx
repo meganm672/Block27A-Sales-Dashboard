@@ -2,6 +2,7 @@
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
 import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
 
 export default function TransactionBar (){
   
@@ -29,7 +30,7 @@ export default function TransactionBar (){
       ];
       const rows = [
         {
-          txId: "01e4dsa",
+          txId: "01e4dsaa",
           user: "johndoe",
           date: "2021-09-01",
           cost: "43.95",
@@ -40,12 +41,12 @@ export default function TransactionBar (){
           date: "2022-04-01",
           cost: "133.45",
         },
-        {
-          txId: "01e4dsa",
-          user: "aberdohnny",
-          date: "2021-09-01",
-          cost: "43.95",
-        },
+         {
+          txId: "01e4dsaaa",
+           user: "aberdohnny",
+           date: "2021-09-01",
+           cost: "43.95",
+         },
         {
           txId: "51034szv",
           user: "goodmanave",
@@ -58,12 +59,12 @@ export default function TransactionBar (){
           date: "2022-11-02",
           cost: "13.55",
         },
-        {
-          txId: "01e4dsa",
+         {
+           txId: "01e4dsa",
           user: "aberdohnny",
           date: "2021-09-01",
-          cost: "43.95",
-        },
+           cost: "43.95",
+         },
         {
           txId: "120s51a",
           user: "wootzifer",
@@ -80,6 +81,7 @@ export default function TransactionBar (){
     return(
         <Box sx={{ height: 300, width: '35vw', backgroundColor: "#DCDCDC"}}>
             <Typography variant='h5'>Recent Transactions</Typography>
+            <Divider sx={{borderBottomWidth: 5, bgcolor: "black"}}></Divider>
         <DataGrid
           getRowId={(row) => row.txId}
           rows={rows}
