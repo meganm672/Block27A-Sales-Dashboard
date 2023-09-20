@@ -7,6 +7,10 @@ import Grow from '@mui/material/Grow';
 import Paper from '@mui/material/Paper';
 import Popper from '@mui/material/Popper';
 import Typography from '@mui/material/Typography';
+import SvgIcon from '@mui/material/SvgIcon';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import React from 'react';
 
 export default function Header(){
@@ -43,18 +47,38 @@ export default function Header(){
   
       prevOpen.current = open;
     }, [open]);
-  
-    const paperStyle = {height: '100vh', width: '25vw'}
+
+    function HomeIcon(props) {
+        return (
+          <SvgIcon {...props}>
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </SvgIcon>
+        );
+      }
+
+    const paperStyle = {height: '100vh', width: '25vw', backgroundColor: "#DCDCDC"}
+    const ownerStyle = {margin: "5px",textAlign: "center",}
+    const dashStyle= {margin: "5px", textAlign: "center",color: '#66CDAA'}
+    const menuStyle={margin: "10px"}
+    const homeStyle= {margin: "20px"}
+    const helpStyle={margin: "20px", paddingBottom: "15px"}
+    const helpIconStyle= {margin:"20px", }
     return (
       <Stack direction="row" spacing={2}>
-        <Paper elevation= {8}style={paperStyle}>
-          <MenuList>
-            <MenuItem>Profile</MenuItem>
-            <MenuItem>My account</MenuItem>
-            <MenuItem>Logout</MenuItem>
-          </MenuList>
+        <Paper elevation= {8} style={paperStyle}>
+        <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+            style={menuStyle}
+          >
+            <MenuIcon />
+          </IconButton>
         <div>
-            <Typography variant ="h3">The King's Resturaunt</Typography>
+            <Typography variant ="h3" style={ownerStyle}>The King's Resturaunt</Typography>
+            <Typography variant='h6' style= {dashStyle}>Dashboard Owner</Typography>
           <Button
             ref={anchorRef}
             id="composition-button"
@@ -62,9 +86,14 @@ export default function Header(){
             aria-expanded={open ? 'true' : undefined}
             aria-haspopup="true"
             onClick={handleToggle}
+            style={homeStyle}
           >
-            Dashboard
+            <HomeIcon style={homeStyle}/> {" "}Dashboard
           </Button>
+          <box>
+          <Typography style={helpStyle}> <HelpOutlineIcon fontSize= "small" style={helpIconStyle} />  FAQ Page</Typography>
+
+          </box>
           <Popper
             open={open}
             anchorEl={anchorRef.current}
